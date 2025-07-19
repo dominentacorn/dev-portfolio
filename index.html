@@ -1,69 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        background: radial-gradient(circle at center, #0f0f0f, #000);
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 1.5rem;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-      }
-      .icon-hover:hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease-in-out;
-      }
-    </style>
-  </head>
-  <body class="flex items-center justify-center min-h-screen px-4">
-    <div class="glass p-6 max-w-lg w-full text-center">
-      <img src="https://i.imgur.com/UMr9K2O.png" alt="pfp" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-white" />
-      <h1 class="text-3xl font-bold">Dev <span class="text-gray-300 text-xl">💎⭐🔥</span></h1>
-      <p class="text-gray-400">Website Developer/Roblox Dev</p>
-      <p class="text-xs text-gray-500 mt-1">joined about 4 year ago</p>
-
-      <div class="mt-6 grid grid-cols-2 gap-4">
-        <div class="bg-gray-800 p-3 rounded-lg">
-          <p class="text-sm font-semibold">@urlocalpcperson</p>
-          <p class="text-xs text-red-400">Google Developer Program certified Website/Bot Dev</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DominentAcorn Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2c5c4f91e.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+    body {
+      background: #0d0d0d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      position: relative;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .profile img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 2px solid #ff9900;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+    .name {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    .handle {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .badge {
+      background-color: #1e1e1e;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid #444;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .link-btn {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .link-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    .section-title {
+      margin-top: 2rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="profile">
+      <img src="https://cdn.discordapp.com/attachments/123456789/devpfp.png" alt="Profile" />
+      <div class="info">
+        <div class="name">DominentAcorn</div>
+        <div class="handle">urlocalpcperson • He/Him</div>
+        <div class="badges">
+          <div class="badge">DRS</div>
+          <div class="badge">✔️ Verified</div>
+          <div class="badge">Google Developer Program</div>
+          <div class="badge">Roblox Dev</div>
         </div>
-        <div class="bg-gray-800 p-3 rounded-lg">
-          <p class="text-sm font-semibold">Alaris Network</p>
-          <p class="text-xs text-green-400">21 Online • 211 Members</p>
-          <button class="mt-1 text-xs bg-green-600 px-2 py-0.5 rounded">Join</button>
-        </div>
       </div>
-
-      <div class="mt-6 flex justify-center gap-6 text-2xl">
-        <a href="https://discord.com/users/urlocalpcperson" class="icon-hover">💬</a>
-        <a href="mailto:worldcrossdevelopers@gmail.com" class="icon-hover">📧</a>
-        <a href="https://www.roblox.com/users/2392875328/profile" class="icon-hover">🕹️</a>
-        <a href="#works" class="icon-hover">🌐</a>
-      </div>
-
-      <div id="works" class="mt-10 text-left">
-        <h2 class="text-lg font-semibold border-b border-gray-600 pb-1 mb-3">Past Work</h2>
-        <ul class="space-y-2">
-          <li>
-            <a href="https://seamartcorporation.rf.gd" target="_blank" class="text-blue-400 hover:underline">SeaMart Corporation</a>
-          </li>
-          <li>
-            <a href="https://dartmoderates.rf.gd" target="_blank" class="text-blue-400 hover:underline">Dart Moderates</a>
-          </li>
-          <li class="text-gray-400 text-sm">...and more coming soon.</li>
-        </ul>
-      </div>
-
-      <p class="text-xs text-gray-500 mt-10">Location: Pakistan • Payment via Robux (Group funds/Gamepasses)</p>
     </div>
-  </body>
+
+    <div class="links">
+      <a href="mailto:worldcrossdevelopers@gmail.com" class="link-btn"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.roblox.com/users/2392875328/profile" class="link-btn"><i class="fab fa-roblox"></i> Roblox Profile</a>
+      <a href="https://discord.com/users/YOUR-ID" class="link-btn"><i class="fab fa-discord"></i> Discord: urlocalpcperson</a>
+    </div>
+
+    <div class="section-title">Past Works</div>
+    <div class="links">
+      <a href="https://seamartcorporation.rf.gd" class="link-btn">SeaMart Corporation</a>
+      <a href="https://dartmoderates.rf.gd" class="link-btn">Dart Moderates</a>
+    </div>
+
+    <div class="footer">
+      Payment in Robux (Group Funds / Gamepasses)<br>
+      &copy; 2025 DominentAcorn
+    </div>
+  </div>
+</body>
 </html>
