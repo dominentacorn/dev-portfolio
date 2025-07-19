@@ -1,85 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dev | Roblox Creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: 'class' };
-    </script>
     <style>
-      /* Toggle switch */
-      .switch {
-        width: 52px;
-        height: 28px;
-        background: #444;
-        border-radius: 9999px;
-        position: relative;
-        cursor: pointer;
-        transition: background 0.3s ease;
+      body {
+        background: radial-gradient(circle at center, #0f0f0f, #000);
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
-      .switch::before {
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 24px;
-        height: 24px;
-        background: white;
-        border-radius: 50%;
-        box-shadow: 0 0 5px rgba(0,0,0,0.4);
-        transition: transform 0.3s ease;
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.5rem;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
       }
-      .switch.active {
-        background: #facc15;
-      }
-      .switch.active::before {
-        transform: translateX(24px);
+      .icon-hover:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
       }
     </style>
   </head>
-  <body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-    
-    <main class="flex items-center justify-center min-h-screen px-4">
-      <div class="w-full max-w-md bg-gray-100 dark:bg-gray-900 rounded-xl p-6 text-center shadow-xl">
-        <img src="https://i.imgur.com/UMr9K2O.png" alt="pfp" class="w-24 h-24 mx-auto rounded-full shadow mb-4" />
-        <h1 class="text-3xl font-bold">Dev</h1>
-        <p class="text-gray-600 dark:text-gray-400 mb-4">Roblox Creator • Web Dev • Logo Designer</p>
+  <body class="flex items-center justify-center min-h-screen px-4">
+    <div class="glass p-6 max-w-lg w-full text-center">
+      <img src="https://i.imgur.com/UMr9K2O.png" alt="pfp" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-white" />
+      <h1 class="text-3xl font-bold">Dev <span class="text-gray-300 text-xl">💎⭐🔥</span></h1>
+      <p class="text-gray-400">intellectual property protector</p>
+      <p class="text-xs text-gray-500 mt-1">joined about 1 year ago</p>
 
-        <div class="space-y-3 mb-6">
-          <a href="https://seamartcorporation.rf.gd" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">SeaMart</a>
-          <a href="https://dartmoderates.rf.gd" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Dart Moderates</a>
-          <a href="https://discord.gg" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Discord</a>
-          <a href="https://roblox.com/users/2392875328" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Roblox</a>
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="bg-gray-800 p-3 rounded-lg">
+          <p class="text-sm font-semibold">@urlocalpcperson</p>
+          <p class="text-xs text-red-400">extreme inactivity starting soon</p>
         </div>
-
-        <!-- Toggle Theme -->
-        <div class="mt-4 flex items-center justify-center gap-3 text-sm text-gray-600 dark:text-gray-400">
-          <span>🌞</span>
-          <div id="themeToggle" class="switch"></div>
-          <span>🌙</span>
+        <div class="bg-gray-800 p-3 rounded-lg">
+          <p class="text-sm font-semibold">Alaris Network</p>
+          <p class="text-xs text-green-400">21 Online • 211 Members</p>
+          <button class="mt-1 text-xs bg-green-600 px-2 py-0.5 rounded">Join</button>
         </div>
-
-        <p class="mt-6 text-xs text-gray-500 dark:text-gray-600">&copy; 2025 Dev. All rights reserved.</p>
       </div>
-    </main>
 
-    <script>
-      const themeToggle = document.getElementById('themeToggle');
-      const html = document.documentElement;
+      <div class="mt-6 flex justify-center gap-6 text-2xl">
+        <a href="https://discord.com/users/urlocalpcperson" class="icon-hover">💬</a>
+        <a href="mailto:worldcrossdevelopers@gmail.com" class="icon-hover">📧</a>
+        <a href="https://www.roblox.com/users/2392875328/profile" class="icon-hover">🕹️</a>
+        <a href="#works" class="icon-hover">🌐</a>
+      </div>
 
-      if (localStorage.getItem('theme') === 'light') {
-        html.classList.remove('dark');
-        themeToggle.classList.add('active');
-      }
+      <div id="works" class="mt-10 text-left">
+        <h2 class="text-lg font-semibold border-b border-gray-600 pb-1 mb-3">Past Work</h2>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://seamartcorporation.rf.gd" target="_blank" class="text-blue-400 hover:underline">SeaMart Corporation</a>
+          </li>
+          <li>
+            <a href="https://dartmoderates.rf.gd" target="_blank" class="text-blue-400 hover:underline">Dart Moderates</a>
+          </li>
+          <li class="text-gray-400 text-sm">...and more coming soon.</li>
+        </ul>
+      </div>
 
-      themeToggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        themeToggle.classList.toggle('active');
-
-        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-      });
-    </script>
+      <p class="text-xs text-gray-500 mt-10">Location: Pakistan • Payment via Robux (Group funds/Gamepasses)</p>
+    </div>
   </body>
 </html>
