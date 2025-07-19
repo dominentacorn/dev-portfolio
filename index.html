@@ -1,158 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dev | Roblox Creator & Web Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind dark mode config
-    tailwind.config = {
-      darkMode: 'class',
-    };
-  </script>
-  <style>
-    /* Custom toggle switch */
-    .switch {
-      width: 50px;
-      height: 26px;
-      background: #555;
-      border-radius: 9999px;
-      position: relative;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .switch::before {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 22px;
-      height: 22px;
-      background: white;
-      border-radius: 9999px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .switch.active {
-      background: #facc15; /* yellow-400 */
-    }
-
-    .switch.active::before {
-      transform: translateX(24px);
-    }
-  </style>
-</head>
-<body class="bg-gray-950 text-white font-sans transition-colors duration-300 dark:bg-gray-950 dark:text-white">
-
-<!-- Header -->
-<header class="w-full flex items-center justify-between px-6 py-4 bg-gray-950 dark:bg-gray-950">
-  <div class="text-2xl font-bold text-yellow-400">🛠️ Dev</div>
-
-  <div class="flex flex-col items-center gap-1">
-    <span class="text-xs text-gray-300 dark:text-gray-400">Theme: Light / Dark</span>
-    <div id="themeToggle" class="switch" title="Toggle Theme"></div>
-  </div>
-</header>
-
-  <!-- Hero Section -->
-  <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Dev 👋</h1>
-    <p class="text-lg md:text-xl text-gray-300 dark:text-gray-300 max-w-2xl">
-      A software engineer based in Pakistan. I model Roblox items, design logos, and build websites – and yes, I accept
-      <span class="text-yellow-400 font-semibold">Robux</span> as payment!
-    </p>
-    <a href="#contact"
-       class="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition">
-      Contact Me
-    </a>
-  </section>
-
-  <!-- Services Section -->
-  <section class="py-16 bg-gray-100 dark:bg-gray-900 px-6 transition-colors duration-300">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">What I Offer 💼</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:translate-y-1 hover:shadow-xl transition duration-300">
-          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">🧱 Roblox 3D Modeling</h3>
-          <p class="text-gray-700 dark:text-gray-300">Custom hats, furniture, gear, and more for your Roblox games.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:translate-y-1 hover:shadow-xl transition duration-300">
-          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">🎨 Logo Design</h3>
-          <p class="text-gray-700 dark:text-gray-300">Clean and modern logos for groups, games, or branding.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:translate-y-1 hover:shadow-xl transition duration-300">
-          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">🌐 Website Development</h3>
-          <p class="text-gray-700 dark:text-gray-300">Stylish, fast websites for Roblox communities and creators.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section class="py-16 bg-white dark:bg-gray-950 px-6 transition-colors duration-300" id="portfolio">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Past Work 🌟</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-left">
-        <a href="https://seamartcorporation.rf.gd" target="_blank"
-           class="block bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-xl transition duration-300">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">SeaMart Corporation</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Modern store site built with simplicity and flair.</p>
-        </a>
-        <a href="https://dartmoderates.rf.gd" target="_blank"
-           class="block bg-gray-100 dark:bg-gray-800 p-5 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-xl transition duration-300">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dart Moderates</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Community site for a Roblox moderation group.</p>
-        </a>
-        <div class="block bg-gray-100 dark:bg-gray-800 p-5 rounded-xl opacity-60">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">More coming soon...</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">I'm constantly building — stay tuned!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="py-16 bg-gray-100 dark:bg-gray-900 px-6 transition-colors duration-300" id="contact">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Let's Work Together 🚀</h2>
-      <p class="text-gray-700 dark:text-gray-300 mb-4">Interested in working with me? DM me on Discord or Roblox, and let's make something awesome.</p>
-      <div class="text-lg text-gray-800 dark:text-gray-100">
-        <p><strong>Payment:</strong> Robux (Group funds / Gamepasses)</p>
-        <p><strong>Discord:</strong> <span class="text-yellow-400">urlocalalpcperson (Dev)</span></p>
-        <p><strong>Roblox:</strong> <span class="text-yellow-400">DominentAcorn</span></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-6 text-center text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-950 transition-colors duration-300">
-    &copy; 2025 Dev | All Rights Reserved
-  </footer>
-
-  <!-- Theme Script -->
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'light') {
-      html.classList.remove('dark');
-      themeToggle.classList.add('active');
-    }
-
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      themeToggle.classList.toggle('active');
-
-      if (html.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dev | Roblox Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+    <style>
+      /* Toggle switch */
+      .switch {
+        width: 52px;
+        height: 28px;
+        background: #444;
+        border-radius: 9999px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s ease;
       }
-    });
-  </script>
-</body>
+      .switch::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 24px;
+        height: 24px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease;
+      }
+      .switch.active {
+        background: #facc15;
+      }
+      .switch.active::before {
+        transform: translateX(24px);
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+    
+    <main class="flex items-center justify-center min-h-screen px-4">
+      <div class="w-full max-w-md bg-gray-100 dark:bg-gray-900 rounded-xl p-6 text-center shadow-xl">
+        <img src="https://i.imgur.com/UMr9K2O.png" alt="pfp" class="w-24 h-24 mx-auto rounded-full shadow mb-4" />
+        <h1 class="text-3xl font-bold">Dev</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">Roblox Creator • Web Dev • Logo Designer</p>
+
+        <div class="space-y-3 mb-6">
+          <a href="https://seamartcorporation.rf.gd" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">SeaMart</a>
+          <a href="https://dartmoderates.rf.gd" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Dart Moderates</a>
+          <a href="https://discord.gg" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Discord</a>
+          <a href="https://roblox.com/users/2392875328" target="_blank" class="block w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Roblox</a>
+        </div>
+
+        <!-- Toggle Theme -->
+        <div class="mt-4 flex items-center justify-center gap-3 text-sm text-gray-600 dark:text-gray-400">
+          <span>🌞</span>
+          <div id="themeToggle" class="switch"></div>
+          <span>🌙</span>
+        </div>
+
+        <p class="mt-6 text-xs text-gray-500 dark:text-gray-600">&copy; 2025 Dev. All rights reserved.</p>
+      </div>
+    </main>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+
+      if (localStorage.getItem('theme') === 'light') {
+        html.classList.remove('dark');
+        themeToggle.classList.add('active');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        themeToggle.classList.toggle('active');
+
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      });
+    </script>
+  </body>
 </html>
